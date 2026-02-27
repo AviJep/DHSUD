@@ -224,7 +224,7 @@ const ProjectFormModal = ({
         showNotification(appToEdit ? "Project updated successfully" : "New project created successfully", "success");
         onSave(); // Triggers table refresh and closes modal
       })
-      .catch(err => showNotification("Action failed! Check server connection.", "error"));
+      .catch(() => showNotification("Action failed! Check server connection.", "error"));
   }
 
   return (
